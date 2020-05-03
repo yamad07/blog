@@ -3,6 +3,9 @@ languageCode = "en-us"
 theme = "terminal"
 paginate = 5
 
+[blackfriday]
+  hrefTargetBlank = true
+
 [params]
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "works"
@@ -38,7 +41,7 @@ paginate = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "When you wish upon a code."
+    title = "Yusuke Yamada: When you wish upon a code."
     subtitle = "A simple, retro theme for Hugo"
     owner = ""
     keywords = ""
