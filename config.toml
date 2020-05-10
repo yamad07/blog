@@ -7,6 +7,7 @@ paginate = 5
   hrefTargetBlank = true
 
 [params]
+  analytics = "UA-166048588-1"
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "works"
 
