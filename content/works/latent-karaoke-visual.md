@@ -3,7 +3,7 @@ title: "holarchy: movie clip selection using multi-modal representation"
 date: 2020-05-02T12:24:29+09:00
 ---
 
-{{< figure src="https://user-images.githubusercontent.com/20740529/82110712-6cc76580-977b-11ea-9097-63b41d78f70c.png" title="Generative Model" class="center" width="320" >}}
+{{< figure src="https://user-images.githubusercontent.com/20740529/82110968-a5b40a00-977c-11ea-9e59-ec7967ead92b.png" title="Generative Model" class="center" width="320" >}}
 https://ai-visual.github.io/holarchy
 
 本作品はディープラーニングを用いた映像の自動選択により，新たなaudio-visualを作り出すオンラインインスタレーションである．
