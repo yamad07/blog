@@ -20,3 +20,11 @@ https://ai-visual.github.io/holarchy
 本作品によって，audio-visualやDJ+VJ表現は一度アーティストの手癖や判断基準から開放され逸脱し，アーティストにも新たな視点を与えるだろう．
 
 
+Keio SFC Nao Tokui Lab (Computational Creativity Lab) x-visual team
+
+Credits:
+- Scott Allen
+- **Yusuke Yamada**
+- Reo Anzai
+- Santa Naruse
+- Aina Ono
