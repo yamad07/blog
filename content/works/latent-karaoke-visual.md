@@ -1,6 +1,6 @@
 ---
 title: "holarchy: movie clip selection using multi-modal representation"
-date: 2020-05-02T12:24:29+09:00
+date: 2020-05-16T12:24:29+09:00
 ---
 
 {{< figure src="https://user-images.githubusercontent.com/20740529/82110968-a5b40a00-977c-11ea-9e59-ec7967ead92b.png" title="Generative Model" class="center" width="320" >}}
