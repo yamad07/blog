@@ -40,31 +40,19 @@ draft: true
 
 結果としては，全体の画像と人の領域を両方用いたモデルの精度が最も高いという結果になりました．文脈の情報を考慮するために別々の特徴量を抽出していることが，高い精度に起因しているという見方ができます．
 
-## 工学的なアプローチによる改善
+## 文脈情報への注目
 
-上記の手法を大きく改善し，SOTAを達成したのが[Context-Aware Generation-Based Net for Multi-Label Visual Emotion Recognition](https/ieeexplore.ieee.org/Xplore/login.jsp?reason=notIncluded&url=http%3A%2F%2Fieeexplore.ieee.org%2Fstamp%2Fstamp.jsp)という研究です．この研究では主にニューラルネットワークの研究において有効性が示されている機構を導入しアーキテクチャの改善を行なっています．アテンションとそれを有効活用するためのGRUの導入を行いCAGBNという新たなモデルを提案しています．
+上記の手法はあくまでも全体の画像と人の領域でしたが，全体の画像に人の領域の画像が含まれてしまっているため，全体の画像において人の領域以外の部分を考慮できているとは一概には言えません．
 
-アーキテクチャの図は以下です．EMOTICと同様に人領域の画像と全体の画像をそれぞれ別々のネットワーク(ResNet-50)に入力し，それに対してAttentionをかけて画像をエンコードします．エンコードされた特徴量に対して，感情のラベルの分散表現を結合させ，GRUに入力するという流れを，クラスごとに行います．その結果を最終的にSoftmax関数に入力し，予測の分布を得ます．
+そこで，顔の領域の画像とと顔以外の領域の画像に分けてそれぞれから特徴量を抽出する手法が提案されました([Context-Aware Emotion Recognition Networks](https://arxiv.org/pdf/1908.05913.pdf))．この手法を用いることで，人の顔以外の文脈も十分に考慮されることが期待できます．
 
-![CAGBNのアーキテクチャ](https://i.gyazo.com/b65a282b1a168691fbe49fe5c9e0c7f0.png)
+以下の図は実際に顔以外の領域の画像において，ニューラルネットワークがどこに注目しているかを可視化したものです．人の顔の領域をマスクした画像においては，別の人に対して注目がいっていることがわかります．
 
-結果は以下です．EMOTICの実験結果のようなクラスごとのAverage Precisionはないのですが，Mutl-Classの評価としてベーシックな二種類のF1スコアを出しています．EMOTICの手法をおおきく改善できていることがわかります．
+![CAER-Netの注目領域](https://i.gyazo.com/0fa3084c9793fce45edf250d2c6400d8.png)
 
-CAGBNで提案されたいくつかの機構について詳しく見ていきます．先ずは感情のラベルの分散表現をt-SNEで二次元に落として可視化したものです．
+## 文脈情報の追加
 
-![分散表現のベクトルをt-SNEで可視化したときの分布](https://i.gyazo.com/6f66e34c8c3c181780371810af20539e.png)
-
-これを見ると，意味的に近い感情は，分散表現の上でもかなり近くなっていることがわかり，画像についているラベルから感情の概念をうまく獲得できていることがわかります．
-
-アテンションが実際に画像内のどこに注目しているかを見ると，感情のラベルごとに違う領域を見ていることがわかります．
-
-![クラスごとのアテンション](https://i.gyazo.com/e3531df4c5e02920348f9290f3c4e24c.png)
-
-
-
-## 心理学的なアプローチによる改善
-
-CAGBNとは違い，心理学で提唱されている概念をうまくニューラルネットワークの学習に取り入れようとしているのが，[EmotiCon: Context-Aware Multimodal Emotion Recognition using Frege’s Principle](https://openaccess.thecvf.com/content_CVPR_2020/papers/Mittal_EmotiCon_Context-Aware_Multimodal_Emotion_Recognition_Using_Freges_Principle_CVPR_2020_paper.pdf)という研究です．Fregeの原則というのに従ってContext-Aware Emotional Recognitionを行うというアプローチです．
+より文脈情報を加えることで精度を高めるアプローチをとっているのが[EmotiCon: Context-Aware Multimodal Emotion Recognition using Frege’s Principle](https://openaccess.thecvf.com/content_CVPR_2020/papers/Mittal_EmotiCon_Context-Aware_Multimodal_Emotion_Recognition_Using_Freges_Principle_CVPR_2020_paper.pdf)の研究です．Fregeの原則に従ってContext-Aware Emotional Recognitionを行うというアプローチです．
 
 Fregeの原則とは，「言葉の意味を単独で問われるべきではない．文章などの文脈でのみ問われるべきである．」というものです．これを今回のタスクに落とし込むと，「人の感情はその文脈でのみ問われるべきである」ということになります．この考え方を用いて，画像から得られる多くの文脈を入力して感情の予測を行うのは，この研究のアプローチです．
 
@@ -82,9 +70,9 @@ Fregeの原則とは，「言葉の意味を単独で問われるべきではな
 
 ## まとめ
 
-今回はContext-aware Emotion Recognitionに関する研究をまとめました．複数のアプローチで手法が改善されていることがわかります．
+今回はContext-aware Emotion Recognitionに関する研究をまとめました．基本的には対象の人以外の文脈をどのように追加するか，のアプローチで手法が改善されていることがわかります．
 
-EMOTIC以外の手法ではVADモデルによる評価は行われていませんでした．単純に精度が出なかったからなのか，正確なことはわかりませんが，おそらく離散的な感情の表現にはある程度の限界があるというのと，音楽のデータなどと組み合わせてマルチモーダルな学習をしたい時は，VADモデルによる予測値を有効活用できるという点で，今後はVADの抜本的な精度改善がなされることもありそうです．
+個人的には，同じ画像の中の別の人の感情がどれくらい正確に予測できているのか，が気になりました．この精度がかなり高くなれば，同じ空間にいる違う人のそれぞれの感情に応じて，最適な情報やインタラクションができるようになるため，新しいインターフェースを作ることができるかもしれません．
 
 ## 参考
 
