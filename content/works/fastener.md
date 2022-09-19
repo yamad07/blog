@@ -1,7 +1,7 @@
 ---
 title: "惜しみない敬意と愛を込めて"
 date: 2022-09-04T21:33:30+09:00
-draft: false
+draft: true
 ---
 
 自分はMr.Childrenの「ファスナー」という曲が好きだ。
