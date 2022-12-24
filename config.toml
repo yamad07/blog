@@ -9,7 +9,7 @@ paginate = 5
 [params]
   analytics = "UA-166048588-1"
   # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "works"
+  contentTypeName = "blogs"
 
   themeColor = "blue"
 
@@ -57,22 +57,18 @@ paginate = 5
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
+        identifier = "blogs"
+        name = "Blogs"
+        url = "/"
+      [[languages.en.menu.main]]
+        identifier = "me"
+        name = "Me"
+        url = "/me"
       [[languages.en.menu.main]]
         identifier = "publications"
         name = "Publications"
         url = "/publications"
       [[languages.en.menu.main]]
-        identifier = "works"
-        name = "Works"
-        url = "/"
-      [[languages.en.menu.main]]
         identifier = "skills"
         name = "Skills"
         url = "https://lapras.com/public/MX20T7E"
-      [[languages.en.menu.main]]
-        identifier = "blogs"
-        name = "Blogs"
-        url = "https://medium.com/yusuke-yamada-blog"
