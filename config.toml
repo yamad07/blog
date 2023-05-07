@@ -9,7 +9,7 @@ paginate = 5
 [params]
   analytics = "UA-166048588-1"
   # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "blogs"
+  contentTypeName = "works"
 
   themeColor = "blue"
 
@@ -60,6 +60,10 @@ paginate = 5
         identifier = "me"
         name = "Me"
         url = "/me"
+      [[languages.en.menu.main]]
+        identifier = "works"
+        name = "Works"
+        url = "/"
       [[languages.en.menu.main]]
         identifier = "publications"
         name = "Publications"

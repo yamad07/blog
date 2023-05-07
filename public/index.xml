@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yusuke Yamada: When you wish upon a code.</title>
+    <link>/</link>
+    <description>Recent content on Yusuke Yamada: When you wish upon a code.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Apr 2020 15:06:56 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UNLABELED—Camouflage against the machines</title>
+      <link>/works/unlabeled/</link>
+      <pubDate>Wed, 29 Apr 2020 15:06:56 +0900</pubDate>
+      
+      <guid>/works/unlabeled/</guid>
+      <description>UNLABELED—Camouflage against the machines 監視資本主義社会が到来しようとしている。タクシーに乗れば、見た目の性別で、髭剃りのCMを押し付けられ、空港では、人種を特定され、危険人物のラベルを貼られる。日常のあらゆる振る舞いがデータ化され、効率化や利益の追求のために用いられる。
+一方、我々は情報の搾取から身を守る術を持たない。カモフラージュ(擬態)が要る。アイデンティティを搾取する社会を生きていくための服が要る。 Keio SFC Nao Tokui Lab (Computational Creativity Lab) × Dentsu Lab Tokyo
+Credits:
+Creative Director：Nao Tokui Creative Director：Naoki Tanaka Development:
+Technical Direction ：Makoto Amano Design Direction：Hanako Hirata Machine Learning ：Ryosuke Nakajima Design Assistant：Yuka Sai Technical Support：Yusuke Yamada Garment Design：Shun Matsunaga Creative Planner：Risako Kawashima Exhibition Producer：Ryo Miura Producer ：Masafumi Fujioka Producer：Ryotaro Omori Production Manager：Kohei Suzuki Film Director：Shuto Hashiura Cinematographer：Yudai Maruyama Music：Reo Anzai Stylist：Kumiko Sannomaru Fashion Director：Takuya Chiba Hair makeup：Momiji Saito Cast：Mayuu Yokota Cast：Shinako Cast：Ryosuke Kono Cast：Akari Eda </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/me/</guid>
+      <description>I&amp;rsquo;m Yusuke Yamada, CTO at ispec inc and vimmer.</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/</guid>
+      <description>Conference 山田 佑亮、谷村 朋樹、中澤 仁、”CiCADA: 継続的なドメイン適応のための条件付き敵対的学習”、MIRU2019、2019 山田 佑亮、米澤 拓郎、伊藤 友隆、中澤 仁、”複数スケールの分類機構によるアテンションを用いた広域の群衆密度の推定”、MIRU2019、 2019 谷村 朋樹、山田 佑亮、米澤 拓郎、中澤 仁、”GANonymizerV2: 物体の影領域を考慮した都市画像の匿名化手法”、MIRU2019、 2019 山田 佑亮、河野 慎、米澤 拓郎、中澤 仁、”深層学習を用いた高解像度画像からの人物カウント”、人工知能学会全国大会、2018 Award 全国大会優秀賞: 山田 佑亮、河野 慎、米澤 拓郎、中澤 仁、”深層学習を用いた高解像度画像からの人物カウント”,人工知能学会全国大会, 2018 Exhibition holarchy: SIGGRAPH ASIA 2020 ART GALLERY UNLABELED—Camouflage against the machines </description>
+    </item>
+    
+  </channel>
+</rss>
