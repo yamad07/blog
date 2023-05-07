@@ -57,10 +57,6 @@ paginate = 5
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "blogs"
-        name = "Blogs"
-        url = "/"
-      [[languages.en.menu.main]]
         identifier = "me"
         name = "Me"
         url = "/me"
